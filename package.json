@@ -1,0 +1,30 @@
+{
+	"name": "svg-exporter",
+	"description": "",
+	"version": "0.1.0",
+	"engines": {
+		"sketch": ">=49.0"
+	},
+	"skpm": {
+		"name": "svg-exporter",
+		"manifest": "src/manifest.json",
+		"main": "svg-exporter.sketchplugin",
+		"assets": [
+			"assets/**/*"
+		],
+		"sketch-assets-file": "sketch-assets/icons.sketch"
+	},
+	"scripts": {
+		"build": "skpm-build",
+		"watch": "skpm-build --watch",
+		"start": "skpm-build --watch --run",
+		"postinstall": "npm run build && skpm-link"
+	},
+	"dependencies": {
+		"svgo": "^1.3.2"
+	},
+	"devDependencies": {
+		"@skpm/builder": "^0.7.0"
+	},
+	"author": "Liam Coates <liam@builtbyelement.io>"
+}

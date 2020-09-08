@@ -1,0 +1,15 @@
+{
+	"$schema": "https://raw.githubusercontent.com/sketch-hq/SketchAPI/develop/docs/sketch-plugin-manifest-schema.json",
+	"icon": "icon.png",
+	"commands": [
+		{
+			"name": "Export selected layers",
+			"identifier": "svg-exporter.export-layers-to-svg",
+			"script": "./svg-exporter.js"
+		}
+	],
+	"menu": {
+		"title": "SVG bundler",
+		"items": ["svg-exporter.export-layers-to-svg"]
+	}
+}
